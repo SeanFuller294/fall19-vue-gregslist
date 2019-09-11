@@ -1,13 +1,13 @@
 <template>
   <div class="car">
     Car Deets
-    <h1>{{car.make}}</h1>
-    <h5>{{car.model}}</h5>
-    <h5>{{car.year}}</h5>
-    <h5>{{car.price}}</h5>
+    <h1>Make: {{car.make}}</h1>
+    <h5>Model: {{car.model}}</h5>
+    <h5>Year: {{car.year}}</h5>
+    <h5>Price: ${{car.price}}</h5>
     <img :src="car.imgUrl" alt />
     <h5>{{car.description}}</h5>
-    <button class="btn btn-danger" @click="delort">Delort</button>
+    <button class="btn btn-danger" @click="deleteThisCar">Delete</button>
   </div>
 </template>
 
@@ -30,8 +30,8 @@ export default {
     }
   },
   methods: {
-    delort() {
-      this.$store.dispatch("delortCar", this.car._id);
+    deleteThisCar() {
+      this.$store.dispatch("deleteCar", this.car._id);
     }
   },
   components: {}

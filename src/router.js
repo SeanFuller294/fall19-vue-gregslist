@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Cars from './views/Cars.vue'
+import Houses from './views/Houses.vue'
 
 Vue.use(Router)
 
@@ -10,6 +11,11 @@ export default new Router({
       path: '/cars',
       name: 'cars',
       component: Cars
+    },
+    {
+      path: '/houses',
+      name: 'houses',
+      component: Houses
     },
     {
       path: '/about',
@@ -29,6 +35,13 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: function () {
         return import(/* webpackChunkName: "car" */ './views/Car.vue')
+      }
+    },
+    {
+      path: '/houses/:houseId',
+      name: 'house',
+      component: function () {
+        return import('./views/House.vue')
       }
     },
     {

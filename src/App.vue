@@ -1,6 +1,13 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <h1 id="graigs-list">
+      Graig
+      <img id="left-v" alt="Vue logo" src="./assets/logo.png" />
+      <img id="right-v" alt="Vue logo" src="./assets/logo.png" />
+      li
+      <img id="left-v" alt="Vue logo" src="./assets/logo.png" />
+      <img id="right-v" alt="Vue logo" src="./assets/logo.png" />t
+    </h1>
     <div id="nav">
       <router-link to="/cars">Cars</router-link>|
       <router-link to="/jobs">Jobs</router-link>|
@@ -30,5 +37,22 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+body {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
+  color: white;
+}
+#left-v {
+  transform: rotate(120deg);
+  height: 16px;
+}
+#right-v {
+  transform: rotate(300deg);
+  height: 16px;
+  margin-top: 33px;
+  margin-left: -9.5px;
+}
+#graigs-list {
+  color: white;
 }
 </style>
